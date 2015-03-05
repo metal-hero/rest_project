@@ -5,6 +5,7 @@ from question.api import *
 
 question_resource = QuestionResource() 
 post_resource = PostResource()
+comment_resource = CommentResource()
 
 urlpatterns = patterns('',
   # Examples:
@@ -14,4 +15,5 @@ urlpatterns = patterns('',
   url(r'^admin/', include(admin.site.urls)),
   url(r'^api/v1/', include(question_resource.urls)),
   url(r'^api/v2/', include(post_resource.urls)),
+  url(r'^api/v2/', include(comment_resource.urls)),
 )
